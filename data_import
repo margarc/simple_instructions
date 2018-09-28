@@ -1,0 +1,24 @@
+# Reading a text file into R
+
+# from your directory example if you want to read text file
+# should have the .txt extension
+# execute as below:
+
+file_name <- read.delim("name.txt", header=TRUE, 
+text_to_table <- read.delim("by_country.txt")
+text_to_table <- read.delim("by_country.txt")
+text_to_table
+write.table(text_to_table, 
+            file="by_country_example.csv",sep=",",col.names=FALSE,row.names=FALSE)
+
+read.csv()
+
+df <- read.delim("by_country.txt", 
+                 header = TRUE, sep="\t")
+df
+View(df)
+
+
+example_text_to_table <- read.delim("your_file.txt", header = TRUE, sep="\t")
+View(example_text_to_table)
+
