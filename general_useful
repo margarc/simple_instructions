@@ -2,6 +2,7 @@ seq(1,4,0.25)
 # go from 1 to 4 by 0.25 units increment
 rep(0.1,20)
 # repeats 0.1 twenty times
+# first state what you want to be repeated and then how many times
 sum(c(7,3,10))
 # computes the sum of 7+3+10 that is 20 
 sort(c(7,3,10,3,8))
