@@ -1,11 +1,18 @@
 seq(1,4,0.25)
 # go from 1 to 4 by 0.25 units increment
+
 rep(0.1,20)
 # repeats 0.1 twenty times
 # first state what you want to be repeated and then how many times
+# create tis vector: 3 3 3 3 3 3 
+# as below
+rep(3,6)
+
 sum(c(7,3,10))
 # computes the sum of 7+3+10 that is 20 
+
 sort(c(7,3,10,3,8))
-# this is very useful to sort the numbers you have from lowest value to highest value 
+# this is very useful to sort the numbers you have from lowest value to highest value  **************************
+
 length(c(7,3,10,3,8))
 # length tells us the number of elements we have in the vector, in this example we have 5 
