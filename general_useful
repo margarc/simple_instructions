@@ -20,3 +20,5 @@ length(c(7,3,10,3,8))
 # we know we have data missing or empty so we need to exclude those from the command using the na.rm funciton as below:
 e.g.
 range(anaemia$bmi,na.rm=TRUE)
+
+sapply(dataframe, class) - shows class of each column in the data frame
