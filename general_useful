@@ -22,3 +22,9 @@ e.g.
 range(anaemia$bmi,na.rm=TRUE)
 
 sapply(dataframe, class) - shows class of each column in the data frame
+
+
+# using ifelse to code categories when we have missing values 
+
+anaemia$sex2 <- ifelse(!is.na(anaemia$sex) & anaemia$sex=="Female",1,
+                       ifelse(anaemia$sex=="male" | anaemia$sex=="Male",2,0)) 
