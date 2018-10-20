@@ -28,3 +28,8 @@ sapply(dataframe, class) - shows class of each column in the data frame
 
 anaemia$sex2 <- ifelse(!is.na(anaemia$sex) & anaemia$sex=="Female",1,
                        ifelse(anaemia$sex=="male" | anaemia$sex=="Male",2,0)) 
+
+
+summary(is.na(anaemia$los))
+# Mode       FALSE 
+# logical     580 
