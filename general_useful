@@ -33,3 +33,19 @@ anaemia$sex2 <- ifelse(!is.na(anaemia$sex) & anaemia$sex=="Female",1,
 summary(is.na(anaemia$los))
 # Mode       FALSE 
 # logical     580 
+
+
+# Create a new dataframe from the dataframe you are using:
+
+new_data <- old_data[ which(old_data$variable_needed=="Example" & old_data$variable2_needed > 65),]
+
+# We can extend this using logical operators if needed e.g.
+
+new_data <- old_data[ which(old_data$variable_needed=="Red" | old_data$variable_needed=="Blue" & old_data$variable2_needed > 65),]
+
+
+
+
+
+
+
