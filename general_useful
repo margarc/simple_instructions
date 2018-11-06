@@ -48,6 +48,23 @@ new_data <- old_data[ which(old_data$variable_needed=="Red" | old_data$variable_
 sum(anaemia$hb_post>130 & anaemia$hb_post<=150,na.rm=TRUE) # answer is 7
 
 
+*See Below, an example of how to create a function that will enable us to compute more than one summary statistic and use it in aggregate()
+
+# Calculate mean and SD of hb_pre by duration of post-op hospital stay (short or long). Then tabulate both in same table
+# Create a function so that we can have both mean and sd together:
+
+f1 <- function(x) c(Mean = mean(x), SD = sd(x))
+
+x_pre <- aggregate(hb_pre ~ los_post, data=anaemia, f1); x_pre
+
+x_post <- aggregate(hb_post ~ los_post, data=anaemia, f1); x_post
+
+merge(x_pre, x_post)
+new_table <- merge(x_pre, x_post); new_table
+
+
+
+
 
 
 
