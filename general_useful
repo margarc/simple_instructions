@@ -44,6 +44,8 @@ new_data <- old_data[ which(old_data$variable_needed=="Example" & old_data$varia
 new_data <- old_data[ which(old_data$variable_needed=="Red" | old_data$variable_needed=="Blue" & old_data$variable2_needed > 65),]
 
 
+# count number of observations of people who have hb post-op between >130 and <=150
+sum(anaemia$hb_post>130 & anaemia$hb_post<=150,na.rm=TRUE) # answer is 7
 
 
 
