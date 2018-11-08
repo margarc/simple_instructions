@@ -61,7 +61,7 @@ x_post <- aggregate(hb_post ~ los_post, data=anaemia, f1); x_post
 
 merge(x_pre, x_post)
 new_table <- merge(x_pre, x_post); new_table
-
+# check this again #
 
 is.na(dataset$height) # to see if there are any NA values in the dataset
 
