@@ -71,7 +71,8 @@ Note: when mean > median: +ve skewness
 Create new folder in an existing directory folder:
 dir.create("plots")
 
-
-
+#----------------------------------------------#
+install.packages("epitools")
+library(epitools)
 
 
