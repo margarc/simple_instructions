@@ -75,4 +75,13 @@ dir.create("plots")
 install.packages("epitools")
 library(epitools)
 
+#----------------------------------------------#
+univariable_age<-glm(mort~age,family=binomial)
+
+family argument = describes the error distribution and link function to be used in model
+
+
+
+
+
 
