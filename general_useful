@@ -80,6 +80,7 @@ univariable_age<-glm(mort~age,family=binomial)
 
 family argument = describes the error distribution and link function to be used in model
 
+cbind(exp(coef(model_stratified)),exp(confint(model_stratified)))
 
 
 
