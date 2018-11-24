@@ -82,7 +82,8 @@ family argument = describes the error distribution and link function to be used 
 
 cbind(exp(coef(model_stratified)),exp(confint(model_stratified)))
 
-
+# See  selected number of columns together 
+View(new_all[c("c_site", "year")])
 
 
 
