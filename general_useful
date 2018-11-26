@@ -74,7 +74,6 @@ dir.create("plots")
 #----------------------------------------------#
 install.packages("epitools")
 library(epitools)
-
 #----------------------------------------------#
 univariable_age<-glm(mort~age,family=binomial)
 
@@ -85,7 +84,26 @@ cbind(exp(coef(model_stratified)),exp(confint(model_stratified)))
 # See  selected number of columns together 
 View(new_all[c("c_site", "year")])
 
-
-# Modify y-axis scale (ggplot2)
+#----------------------------------------------For ggplot2------------------------------------------------------------#
+#--- To modify y-axis scale (ggplot2)
 scale_y_continuous(breaks=seq(0, 750, 50))
+
+#--------------------plot the graph use facet-------------------------#
+line <- ggplot(new_all, aes(year, papers, colour=c_site)) 
+
+line + geom_smooth(method="loess") + 
+ xlab("Year: 2006 to 2018") + 
+ ylab("Number of papers") +
+ theme_update(plot.title=element_text(hjust = 0.5)) + 
+ ggtitle("Papers of all cancer sites in the database") +
+ geom_path(aes(group=c_site)) + 
+ geom_line(aes(color=c_site)) + 
+ theme(legend.position="none", # to delete the legend 
+       panel.grid=element_blank(),
+       axis.text.x=element_blank()) + # to remove the text on x-axis (too packed otherwise & not clear)
+ scale_y_continuous(breaks=seq(0, 70, 10)) +
+ scale_color_manual(values=custom.colors) +  # custom colors (ones created)
+ facet_wrap(~ c_site, scales="free")
+
+
 
