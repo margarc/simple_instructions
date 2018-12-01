@@ -88,7 +88,7 @@ View(new_all[c("c_site", "year")])
 #--- To modify y-axis scale (ggplot2)
 scale_y_continuous(breaks=seq(0, 750, 50))
 
-#--------------------plot the graph use facet-------------------------#
+#--------------------plot the graph, use facet-------------------------#
 line <- ggplot(new_all, aes(year, papers, colour=c_site)) 
 
 line + geom_smooth(method="loess") + 
@@ -100,10 +100,10 @@ line + geom_smooth(method="loess") +
  geom_line(aes(color=c_site)) + 
  theme(legend.position="none", # to delete the legend 
        panel.grid=element_blank(),
-       axis.text.x=element_blank()) + # to remove the text on x-axis (too packed otherwise & not clear)
+       axis.text.x=element_blank()) + # to remove the text on x-axis (too packed otherwise & not clear bcz it repeats the year for every cancer site)
  scale_y_continuous(breaks=seq(0, 70, 10)) +
- scale_color_manual(values=custom.colors) +  # custom colors (ones created)
+ scale_color_manual(values=custom.colors) +  # custom colors (those ones created)
  facet_wrap(~ c_site, scales="free")
 
-
+*check if I can exclude year 2017 by removing that row only*
 
