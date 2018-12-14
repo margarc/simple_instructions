@@ -87,6 +87,9 @@ View(new_all[c("c_site", "year")])
 #----------------------------------------------For ggplot2------------------------------------------------------------#
 #--- To modify y-axis scale (ggplot2)
 scale_y_continuous(breaks=seq(0, 750, 50))
+# and also for x-axis modify increment 
+# example with year as Independent variable:
+scale_x_continuous(breaks=seq(2004, 2017, 1))
 
 #--------------------plot the graph, use facet-------------------------#
 line <- ggplot(new_all, aes(year, papers, colour=c_site)) 
