@@ -36,7 +36,7 @@ summary(is.na(anaemia$los))
 
 
 # Create a new dataframe from the dataframe you are using:
-
+# Filter specific data:
 new_data <- old_data[ which(old_data$variable_needed=="Example" & old_data$variable2_needed > 65),]
 
 # We can extend this using logical operators if needed e.g.
