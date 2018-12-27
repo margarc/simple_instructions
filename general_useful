@@ -108,5 +108,12 @@ line + geom_smooth(method="loess") +
  scale_color_manual(values=custom.colors) +  # custom colors (those ones created)
  facet_wrap(~ c_site, scales="free")
 
-*check if I can exclude year 2018, removing that row only*
+*exclude year 2018, removing that row only and redo graph*
 
+#--------------------------------simple BOXPLOT example----------------------------------#
+boxplot(y~x,data=dataset_name, main="something_general", 
+   xlab="something", ylab="something_else")
+   
+   
+   
+   
