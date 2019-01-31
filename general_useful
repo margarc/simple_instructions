@@ -115,5 +115,6 @@ boxplot(y~x,data=dataset_name, main="something_general",
    xlab="something", ylab="something_else")
    
    
-   
+# Simple table generation 
+# Install sjPlot
    
