@@ -43,6 +43,11 @@ new_data <- old_data[ which(old_data$variable_needed=="Example" & old_data$varia
 
 new_data <- old_data[ which(old_data$variable_needed=="Red" | old_data$variable_needed=="Blue" & old_data$variable2_needed > 65),]
 
+# Or another way (choosing the columns we need by name and creating new dataframe)
+myvars_bre <- c("WCRF_Code", "Year", "ResultsNumber")
+new_bre <- bre[myvars_bre]
+dim(new_bre)
+
 
 # count number of observations of people who have hb post-op between >130 and <=150
 sum(anaemia$hb_post>130 & anaemia$hb_post<=150,na.rm=TRUE) # answer is 7
