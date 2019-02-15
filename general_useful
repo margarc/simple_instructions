@@ -123,3 +123,13 @@ boxplot(y~x,data=dataset_name, main="something_general",
 # Simple TABLE generation 
 # Install sjPlot using for example tab_df()
 # Also check: data.table-package
+
+############FILTER AND USE GGPLOT######################
+test1 <- sel_yrs %>%
+ filter(Cancer %in% c("bladder cancer")) %>%
+ ggplot(aes(x=Year, y=results)) +
+ geom_line(linetype="solid",color="blue",size=1) + 
+ geom_point() + 
+ scale_y_continuous(breaks=seq(20, 600, 50)) +
+ scale_x_continuous(breaks=seq(2005, 2019, 2)) + 
+ theme_classic()
