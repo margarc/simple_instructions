@@ -29,7 +29,8 @@ text_to_table
 View(text_to_table)
 write.csv(text_to_table,file="margarita_testing.csv", sep=",", col.names=FALSE,row.names=FALSE)
 
-
+read.csv 
+read_csv
 
 
 
