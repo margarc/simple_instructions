@@ -6,6 +6,8 @@
 
 text_to_table <- read.delim("by_country.txt")
 
+
+
 #----------------------------------------------
 # Best to execute as below:
 file_name <- read.delim("name.txt", header=TRUE, sep="\t")
