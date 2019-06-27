@@ -136,3 +136,12 @@ test1 <- sel_yrs %>%
 
 
 tidyverse
+#--------------------------------------------------------------------------------------------------------------------
+If we need to do successive subsetings it makes more sense to concatenate all the conditions and then subset i.e
+hello1 <- data[cond1, ]
+hello2 <- hello1[cond2, ]
+
+Do instead:
+cond <- hello1 & hello2
+hello2 <- data[cond,]
+
