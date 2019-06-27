@@ -79,7 +79,7 @@ expo + geom_line() + theme_classic() +
                                         face = "plain"))
 
 
-# remove Years 2019 amd 2018 
+# remove Years 2019 and 2018 
 
 bytopic <- bytopic %>%
  filter(Year<2018)
@@ -116,15 +116,6 @@ range(bytopic$Year)
 range(bytopic$Publications)
 # 1 176 
 
-#
-g.papers + geom_smooth(method = "loess") +
- geom_line(aes(color=Topic)) + 
- xlab("Year") + 
- ylab("Number of papers") +
- scale_y_continuous(breaks=seq(0, 170, 5)) +
- theme_classic()
-
- ?geom_smooth
 
 
 g.papers + geom_smooth(method = "loess") +
